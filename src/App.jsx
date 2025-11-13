@@ -1,9 +1,3 @@
-import { Link } from "react-router-dom";
-
-/**
- * Remplace les URLs ci-dessous par tes vrais liens.
- */
-const DEPLOY_URL = "https://ton-deploiement.exemple.app";
 const GITHUB_URL = "https://github.com/SR9401/AEGIS";      // OK
 //const YT_DEMO_URL = "https://youtube.com/watch?v=ton_demo";
 
@@ -31,7 +25,6 @@ export default function Landing() {
           </nav>
           <div className="flex items-center gap-2">
             <a
-              href={DEPLOY_URL}
               className="px-4 py-2 rounded-xl border border-white/10 bg-indigo-600 hover:bg-indigo-500 transition"
             >
               Open App
@@ -54,12 +47,10 @@ export default function Landing() {
               Plan, assign, and monitor operations with a secure dashboard, interactive map and local weather.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href={DEPLOY_URL} className="px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 transition border border-white/10 text-white font-medium">
-                Go to Application
-              </a>
-              <Link to="/login" className="px-5 py-3 rounded-xl bg-slate-800/60 hover:bg-slate-800 transition border border-white/10 text-slate-100">
+              
+              <a href="/login" className="px-5 py-3 rounded-xl bg-slate-800/60 hover:bg-slate-800 transition border border-white/10 text-slate-100">
                 Sign in (Local)
-              </Link>
+              </a>
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-3 text-[12px] text-slate-400">
               <span className="px-2 py-1 rounded-lg border border-white/10 bg-slate-900/50">JWT Auth</span>
@@ -73,7 +64,7 @@ export default function Landing() {
           {/* Large cover image (Intro requirement) */}
           <div className="rounded-2xl border border-white/10 bg-slate-900/60 shadow-2xl overflow-hidden">
             {/* Mets une vraie capture de ton dashboard dans /public/ */}
-            <img src="/logo-aegis.png" alt="AEGIS Cover" className="w-full h-full object-cover" />
+            <img src="public/logo-aegis.png" alt="AEGIS Cover" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
